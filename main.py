@@ -28,22 +28,22 @@ def time_waiting():
 
 
 def info():
-    messagebox.showinfo("Інформація", """Ця програма зробить автоматичне натискання по потрібній вам іконці, яку ви оберете.
-    1) Вказуйте час очікування в секундах у полі (за дефолту 5 сек).
-    2) Вказуєте зображення (.jpeg .jpg .png).
-    3) Перемикаєтесь на потрібну вкладку.
-    4) Програма робить клик.""")
+    messagebox.showinfo("Info", """"This program will automatically click on the selected icon of your choice.
+                        1) Specify the waiting time in seconds (default is 5 seconds).
+                        2) Select an image (.jpeg, .jpg, .png).
+                        3) Switch to the desired tab.
+                        4) The program will perform a click."**""")
 
 
 message = StringVar()
 
 message_entry = Entry(textvariable=message)
-message_entry.place(relx=.5, rely=.1, anchor="c")
+message_entry.place(relx=.5, rely=.1, anchor="center")
 
 main_menu = Menu()
-main_menu.add_cascade(label="Старт", command=autostart)
-main_menu.add_cascade(label="Час", command=time_waiting)
-main_menu.add_cascade(label="Інформація", command=info)
+main_menu.add_cascade(label="Start", command=autostart)
+main_menu.add_cascade(label="Time", command=time_waiting)
+main_menu.add_cascade(label="Info", command=info)
 root.config(menu=main_menu)
 
 root.mainloop()
